@@ -17,7 +17,7 @@ class _DriveCT2State extends State<DriveCT2> {
   List<MyItem> _items= <MyItem>[
     //Add Pump and Drives Details here
     MyItem(tag: '189P-102 A/B/C/S', details: 'CT-2 circulation Pumps', capacity:'8000 M3/Hr', power: '1950 KW', flc: '211 Amp', head: ' M'),
-    MyItem(tag: '189EFM- 101 A to S', details: 'CT-2 Fans', capacity:'3500 M3/Hr', power: '160 KW', flc: '267 Amp', head: ' M'),
+    MyItem(tag: '189EFM-101 A to S', details: 'CT-2 Fans', capacity:'3500 M3/Hr', power: '160 KW', flc: '267 Amp', head: ' M'),
     MyItem(tag: '189P-021 A/S', details: 'FOLS Pump-A', capacity:'15 LPM', power: '0.65 KW', flc: '1.8 Amp', head: ' M'),
     MyItem(tag: '189P-022 A/S', details: 'FOLS Pump-B', capacity:'15 LPM', power: '0.65 KW', flc: '1.8 Amp', head: ' M'),
     MyItem(tag: '189P-023 A/S', details: 'FOLS Pump-C', capacity:'15 LPM', power: '0.65 KW', flc: '1.8 Amp', head: ' M'),
