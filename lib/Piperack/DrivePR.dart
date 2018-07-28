@@ -39,81 +39,92 @@ class _DrivePRState extends State<DrivePR> {
                   isExpanded: item.isExpanded,
                   headerBuilder: (BuildContext context, bool isExpanded){
                     return new Container(
-                      padding: const EdgeInsets.only(left: 8.0),
-                      child: new Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
+                      padding: const EdgeInsets.only(left: 10.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          new Expanded(
-
-                            child: Text(item.tag, style: new TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold,color: Colors.blue),),
-                          ),
-                          new Expanded(
-                            child: Text(item.details, style: new TextStyle(fontSize: 15.0,)),
+                          new Table(
+                            defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                            children: [
+                              new TableRow(
+                                children: [
+                                  new Container(
+                                    //padding: new EdgeInsets.all(10.0),
+                                    child: Text(item.tag, style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue),),
+                                  ),
+                                  new Container(
+                                    //padding: new EdgeInsets.all(10.0),
+                                    child: Text(item.details,),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ],
                       ),
                     );
                   },
-                  body: new Container(
-                    padding: const EdgeInsets.only(left: 40.0, bottom: 10.0),
-                    child: new Column(
+
+                  body: Container(
+                    margin: new EdgeInsets.only(left: 10.0, right: 10.0, bottom: 10.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        new Row(
-                          children: <Widget>[
-                            new Expanded(
-                              child: new Container(
-                                child: new Text('Capacity:', style: TextStyle( color: Colors.redAccent, fontWeight: FontWeight.bold,), ),
-                              ),
+                        new Table(
+                          defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                          border: TableBorder(
+                            //top: BorderSide(width: 0.1),
+                            //bottom: BorderSide(width: 0.1),
+                            horizontalInside: BorderSide(width: 0.1),
+                          ),
+                          children: [
+                            new TableRow(
+                              children: [
+                                new Container(
+                                  padding: new EdgeInsets.all(10.0),
+                                  child: new Text('Capacity:', style: TextStyle( color: Colors.redAccent, fontWeight: FontWeight.bold,), ),
+                                ),
+                                new Container(
+                                  padding: new EdgeInsets.all(10.0),
+                                  child: new Text(item.capacity),
+                                ),
+                              ],
                             ),
-                            new Expanded(
-                              child: new Container(
-                                child: new Text(item.capacity),
-                              ),
+                            new TableRow(
+                              children: [
+                                new Container(
+                                  padding: new EdgeInsets.all(10.0),
+                                  child: new Text('Power:', style: TextStyle( color: Colors.redAccent, fontWeight: FontWeight.bold,),),
+                                ),
+                                new Container(
+                                  padding: new EdgeInsets.all(10.0),
+                                  child: new Text(item.power),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
-                        new Divider(),
-                        new Row(
-                          children: <Widget>[
-                            new Expanded(
-                              child: new Container(
-                                child: new Text('Power:', style: TextStyle( color: Colors.redAccent, fontWeight: FontWeight.bold,),),
-                              ),
+                            new TableRow(
+                              children: [
+                                new Container(
+                                  padding: new EdgeInsets.all(10.0),
+                                  child: new Text('FLC:', style: TextStyle( color: Colors.redAccent, fontWeight: FontWeight.bold,),),
+                                ),
+                                new Container(
+                                  padding: new EdgeInsets.all(10.0),
+                                  child: new Text(item.flc),
+                                ),
+                              ],
                             ),
-                            new Expanded(
-                              child: new Container(
-                                child: new Text(item.power),
-                              ),
-                            ),
-                          ],
-                        ),
-                        new Divider(),
-                        new Row(
-                          children: <Widget>[
-                            new Expanded(
-                              child: new Container(
-                                child: new Text('FLC:', style: TextStyle( color: Colors.redAccent, fontWeight: FontWeight.bold,),),
-                              ),
-                            ),
-                            new Expanded(
-                              child: new Container(
-                                child: new Text(item.flc),
-                              ),
-                            ),
-                          ],
-                        ),
-                        new Divider(),
-                        new Row(
-                          children: <Widget>[
-                            new Expanded(
-                              child: new Container(
-                                child: new Text('Head:', style: TextStyle( color: Colors.redAccent, fontWeight: FontWeight.bold,),),
-                              ),
-                            ),
-                            new Expanded(
-                              child: new Container(
-                                child: new Text(item.head),
-                              ),
+                            new TableRow(
+                              children: [
+                                new Container(
+                                  padding: new EdgeInsets.all(10.0),
+                                  child: new Text('Head:', style: TextStyle( color: Colors.redAccent, fontWeight: FontWeight.bold,),),
+                                ),
+                                new Container(
+                                  padding: new EdgeInsets.all(10.0),
+                                  child: new Text(item.head),
+                                ),
+                              ],
                             ),
                           ],
                         ),
